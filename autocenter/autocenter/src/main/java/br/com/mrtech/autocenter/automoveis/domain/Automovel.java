@@ -25,10 +25,11 @@ public class Automovel {
     private Marca marca;
     private String descricao;
     @NotBlank
+    @Column(unique = true)
     private String placa;
     private Boolean alugado = false;
     @NotNull
-    private LocalDate anoFabricação;
+    private LocalDate anoFabricacao;
     private LocalDateTime dataHoraCadastro;
     private LocalDate dataHoraDaUltimaAtualizacao;
     private int valorDiaria;
@@ -39,7 +40,7 @@ public class Automovel {
         this.descricao = automovelRequest.getDescricao();
         this.placa = automovelRequest.getPlaca();
         this.alugado = automovelRequest.getAlugado();
-        this.anoFabricação = automovelRequest.getAnoFabricação();
+        this.anoFabricacao = automovelRequest.getAnoFabricacao();
         this.dataHoraCadastro = LocalDateTime.now();
         this.valorDiaria = automovelRequest.getValorDiaria();
     }
