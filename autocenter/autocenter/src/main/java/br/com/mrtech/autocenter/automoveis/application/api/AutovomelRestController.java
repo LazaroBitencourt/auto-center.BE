@@ -10,5 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AutovomelRestController implements AutomovelAPI{
 
-    private final AutomovelService automovelService;
+    private final AutomovelService service;
+
+    @Override
+    public AutomovelIdResponse postCadastraNovoVeiculo(AutomovelRequest automovelRequest) {
+        log.info("[inicia] AutomovelRestController - postCadastraNovoVeiculo");
+        AutomovelIdResponse automovel = service.cadastraNovoAutomovel(automovelRequest);
+        log.info("[finaliza] AutomovelRestController - postCadastraNovoVeiculo");
+        return automovel;
+    }
 }
