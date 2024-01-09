@@ -14,13 +14,19 @@ import java.time.LocalDateTime;
 @Getter
 public class AutomovelRequest {
 
+   @NotNull
     private TipoAutomovel tipo;
+    @NotNull
     private Marca marca;
+    @Size(min = 20, message = "A descricao deve ter no minimo 20 caracteres")
     private String descricao;
+    @NotBlank
     private String placa;
     private Boolean alugado = false;
+    @NotNull
     private int valorDiaria;
-    private LocalDate anoFabricação;
+    @NotNull
+    private LocalDate anoFabricacao;
 
 
 }
