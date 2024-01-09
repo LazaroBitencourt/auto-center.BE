@@ -21,8 +21,9 @@ public class AutomovelInfraRepository implements AutomovelRepository {
         try{
             jpaRepository.save(automovel);
         }catch (DataIntegrityViolationException e){
-           throw APIException.build(HttpStatus.BAD_REQUEST,"EXISTE DADOS DUPLICADOS", e);
+            throw APIException.build(HttpStatus.BAD_REQUEST,"EXISTE DADOS DUPLICADOS", e);
         }
+        
         log.info("[finaliza] AutomovelInfraRepository - salva");
         return automovel;
     }
