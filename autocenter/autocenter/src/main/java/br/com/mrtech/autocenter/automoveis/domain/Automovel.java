@@ -1,5 +1,6 @@
 package br.com.mrtech.autocenter.automoveis.domain;
 
+import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -17,18 +18,30 @@ import java.time.LocalDateTime;
 public class Automovel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idCarro;
+    private Long idAutomovel;
     @Enumerated(value = EnumType.STRING)
     private TipoAutomovel  tipo;
     @Enumerated(value = EnumType.STRING)
     private Marca marca;
     private String descricao;
     @NotBlank
+    @Column(unique = true)
     private String placa;
     private Boolean alugado = false;
     @NotNull
-    private LocalDate anoFabricação;
+    private LocalDate anoFabricacao;
     private LocalDateTime dataHoraCadastro;
     private LocalDate dataHoraDaUltimaAtualizacao;
     private int valorDiaria;
+
+    public Automovel(AutomovelRequest automovelRequest) {
+        this.tipo = automovelRequest.getTipo();
+        this.marca = automovelRequest.getMarca();
+        this.descricao = automovelRequest.getDescricao();
+        this.placa = automovelRequest.getPlaca();
+        this.alugado = automovelRequest.getAlugado();
+        this.anoFabricacao = automovelRequest.getAnoFabricacao();
+        this.dataHoraCadastro = LocalDateTime.now();
+        this.valorDiaria = automovelRequest.getValorDiaria();
+    }
 }
