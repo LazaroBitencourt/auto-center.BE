@@ -11,8 +11,9 @@ public interface AutomovelAPI {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     AutomovelIdResponse postCadastraNovoVeiculo(@RequestBody @Valid AutomovelRequest automovelRequest);
-    }
+
 
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     List<ListAutomoveisResponse> getListaTodosVeiculos();
+}
