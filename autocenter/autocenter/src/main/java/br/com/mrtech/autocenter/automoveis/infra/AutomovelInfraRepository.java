@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 @Log4j2
 @RequiredArgsConstructor
 public class AutomovelInfraRepository implements AutomovelRepository {
+
     private final AutomovelSpringDataJpaRepository jpaRepository;
 
     @Override
@@ -23,7 +24,6 @@ public class AutomovelInfraRepository implements AutomovelRepository {
         }catch (DataIntegrityViolationException e){
             throw APIException.build(HttpStatus.BAD_REQUEST,"EXISTE DADOS DUPLICADOS", e);
         }
-        
         log.info("[finaliza] AutomovelInfraRepository - salva");
         return automovel;
     }
