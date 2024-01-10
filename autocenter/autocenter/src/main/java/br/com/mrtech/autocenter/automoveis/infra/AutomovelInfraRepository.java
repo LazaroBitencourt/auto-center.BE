@@ -9,6 +9,8 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 @Log4j2
 @RequiredArgsConstructor
@@ -26,5 +28,13 @@ public class AutomovelInfraRepository implements AutomovelRepository {
         
         log.info("[finaliza] AutomovelInfraRepository - salva");
         return automovel;
+    }
+
+    @Override
+    public List<Automovel> buscaTodosVeiculos() {
+        log.info("[inicia] AutomovelInfraRepository - buscaTodosVeiculos");
+        var listaTodos = jpaRepository.findAll();
+        log.info("[finaliza] AutomovelInfraRepository - buscaTodosVeiculos");
+        return listaTodos;
     }
 }
