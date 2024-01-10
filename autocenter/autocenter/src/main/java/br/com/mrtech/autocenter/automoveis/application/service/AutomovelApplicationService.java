@@ -28,8 +28,8 @@ public class AutomovelApplicationService implements AutomovelService{
     @Override
     public List<ListAutomoveisResponse> listaTodosVeiculos() {
         log.info("[inicia] AutomovelApplicationService - listaTodosVeiculos");
-        
+        List<Automovel> automovel = repository.buscaTodosVeiculos();
         log.info("[finaliza] AutomovelApplicationService - listaTodosVeiculos");
-        return null;
+        return ListAutomoveisResponse.converte(automovel);
     }
 }
