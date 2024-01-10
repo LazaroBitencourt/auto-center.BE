@@ -25,8 +25,8 @@ public class AutovomelRestController implements AutomovelAPI{
     @Override
     public List<ListAutomoveisResponse> getListaTodosVeiculos() {
         log.info("[inicia] AutovomelRestController - getListaTodosVeiculos");
-
+        List<ListAutomoveisResponse> lista = service.listaTodosVeiculos();
         log.info("[finaliza] AutovomelRestController - getListaTodosVeiculos");
-        return null;
+        return lista;
     }
 }
