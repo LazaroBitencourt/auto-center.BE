@@ -16,4 +16,10 @@ public interface AutomovelAPI {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     List<ListAutomoveisResponse> getListaTodosVeiculos();
+
+    @GetMapping("{idAutomovel}")
+    @ResponseStatus(HttpStatus.OK)
+    DetalhaAutomovelResponse getDetalhaAutomovelResponse(@PathVariable Long idAutomovel);
+
+
 }
