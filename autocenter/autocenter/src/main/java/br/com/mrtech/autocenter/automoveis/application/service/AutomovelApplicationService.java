@@ -2,6 +2,7 @@ package br.com.mrtech.autocenter.automoveis.application.service;
 
 import br.com.mrtech.autocenter.automoveis.application.api.AutomovelIdResponse;
 import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
+import br.com.mrtech.autocenter.automoveis.application.api.DetalhaAutomovelResponse;
 import br.com.mrtech.autocenter.automoveis.application.api.ListAutomoveisResponse;
 import br.com.mrtech.autocenter.automoveis.application.repository.AutomovelRepository;
 import br.com.mrtech.autocenter.automoveis.domain.Automovel;
@@ -15,6 +16,7 @@ import java.util.List;
 @Log4j2
 @RequiredArgsConstructor
 public class AutomovelApplicationService implements AutomovelService{
+
     private final AutomovelRepository repository;
 
     @Override
@@ -31,5 +33,13 @@ public class AutomovelApplicationService implements AutomovelService{
         List<Automovel> automovel = repository.buscaTodosVeiculos();
         log.info("[finaliza] AutomovelApplicationService - listaTodosVeiculos");
         return ListAutomoveisResponse.converte(automovel);
+    }
+
+    @Override
+    public DetalhaAutomovelResponse DetalhaAutomovelResponse(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplication - DetalhaAutomovelResponse");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        log.info("[finaliza] AutomovelApplication - DetalhaAutomovelResponse");
+        return new DetalhaAutomovelResponse(automovel);
     }
 }

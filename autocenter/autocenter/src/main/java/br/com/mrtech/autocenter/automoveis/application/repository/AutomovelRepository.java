@@ -8,4 +8,6 @@ public interface AutomovelRepository {
     Automovel salva(Automovel automovel);
 
     List<Automovel> buscaTodosVeiculos();
+
+    Automovel buscaAutomovelId(Long idAutomovel);
 }
