@@ -29,4 +29,14 @@ public class AutovomelRestController implements AutomovelAPI{
         log.info("[finaliza] AutovomelRestController - getListaTodosVeiculos");
         return lista;
     }
+
+    @Override
+    public DetalhaAutomovelResponse getDetalhaAutomovelResponse(Long idAutomovel) {
+        log.info("[inicia] AutomovelResController - getDetalhaAutomovelResponse");
+
+        log.info("[finaliza] AutomovelResController - getDetalhaAutomovelResponse");
+        return null;
+    }
+
+
 }
