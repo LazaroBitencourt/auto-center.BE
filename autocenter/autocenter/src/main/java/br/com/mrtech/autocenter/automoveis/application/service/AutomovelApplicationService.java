@@ -2,6 +2,7 @@ package br.com.mrtech.autocenter.automoveis.application.service;
 
 import br.com.mrtech.autocenter.automoveis.application.api.AutomovelIdResponse;
 import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
+import br.com.mrtech.autocenter.automoveis.application.api.DetalhaAutomovelResponse;
 import br.com.mrtech.autocenter.automoveis.application.api.ListAutomoveisResponse;
 import br.com.mrtech.autocenter.automoveis.application.repository.AutomovelRepository;
 import br.com.mrtech.autocenter.automoveis.domain.Automovel;
@@ -31,5 +32,13 @@ public class AutomovelApplicationService implements AutomovelService{
         List<Automovel> automovel = repository.buscaTodosVeiculos();
         log.info("[finaliza] AutomovelApplicationService - listaTodosVeiculos");
         return ListAutomoveisResponse.converte(automovel);
+    }
+
+    @Override
+    public DetalhaAutomovelResponse DetalhaAutomovelResponse(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplication - DetalhaAutomovelResponse");
+
+        log.info("[finaliza] AutomovelApplication - DetalhaAutomovelResponse");
+        return null;
     }
 }
