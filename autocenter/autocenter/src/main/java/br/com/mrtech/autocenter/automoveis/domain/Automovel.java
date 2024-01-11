@@ -30,9 +30,10 @@ public class Automovel {
     private Boolean alugado = false;
     @NotNull
     private LocalDate anoFabricacao;
+    private int valorDiaria;
     private LocalDateTime dataHoraCadastro;
     private LocalDate dataHoraDaUltimaAtualizacao;
-    private int valorDiaria;
+
 
     public Automovel(AutomovelRequest automovelRequest) {
         this.tipo = automovelRequest.getTipo();
@@ -41,7 +42,8 @@ public class Automovel {
         this.placa = automovelRequest.getPlaca();
         this.alugado = automovelRequest.getAlugado();
         this.anoFabricacao = automovelRequest.getAnoFabricacao();
-        this.dataHoraCadastro = LocalDateTime.now();
         this.valorDiaria = automovelRequest.getValorDiaria();
+        this.dataHoraCadastro = LocalDateTime.now();
+
     }
 }
