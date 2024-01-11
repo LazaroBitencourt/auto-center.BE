@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @Log4j2
 @RequiredArgsConstructor
-public class AutovomelRestController implements AutomovelAPI{
+public class AutomovelRestController implements AutomovelAPI{
 
     private final AutomovelService service;
 
