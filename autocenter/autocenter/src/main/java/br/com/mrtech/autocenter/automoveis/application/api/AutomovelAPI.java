@@ -19,7 +19,7 @@ public interface AutomovelAPI {
 
     @GetMapping("{idAutomovel}")
     @ResponseStatus(HttpStatus.OK)
-    DetalhaAutomovelResponse getDetalhaAutomovelResponse(@PathVariable Long idAutomovel);
+    DetalhaAutomovelResponse getDetalhaAutomovel(@PathVariable Long idAutomovel);
 
 
 }
