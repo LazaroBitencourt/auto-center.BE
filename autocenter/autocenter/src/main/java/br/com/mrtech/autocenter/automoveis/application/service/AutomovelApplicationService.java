@@ -16,6 +16,7 @@ import java.util.List;
 @Log4j2
 @RequiredArgsConstructor
 public class AutomovelApplicationService implements AutomovelService{
+
     private final AutomovelRepository repository;
 
     @Override
@@ -37,8 +38,8 @@ public class AutomovelApplicationService implements AutomovelService{
     @Override
     public DetalhaAutomovelResponse DetalhaAutomovelResponse(Long idAutomovel) {
         log.info("[inicia] AutomovelApplication - DetalhaAutomovelResponse");
-
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         log.info("[finaliza] AutomovelApplication - DetalhaAutomovelResponse");
-        return null;
+        return new DetalhaAutomovelResponse(automovel);
     }
 }
