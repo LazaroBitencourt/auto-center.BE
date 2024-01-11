@@ -33,9 +33,9 @@ public class AutovomelRestController implements AutomovelAPI{
     @Override
     public DetalhaAutomovelResponse getDetalhaAutomovelResponse(Long idAutomovel) {
         log.info("[inicia] AutomovelResController - getDetalhaAutomovelResponse");
-
+        DetalhaAutomovelResponse detalhes = service.DetalhaAutomovelResponse(idAutomovel);
         log.info("[finaliza] AutomovelResController - getDetalhaAutomovelResponse");
-        return null;
+        return detalhes;
     }
 
 
