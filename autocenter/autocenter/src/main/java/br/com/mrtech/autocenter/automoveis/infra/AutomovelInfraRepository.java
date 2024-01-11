@@ -37,4 +37,15 @@ public class AutomovelInfraRepository implements AutomovelRepository {
         log.info("[finaliza] AutomovelInfraRepository - buscaTodosVeiculos");
         return listaTodos;
     }
+
+    @Override
+    public Automovel buscaAutomovelId(Long idAutomovel) {
+        log.info("[inicia] AutomovelInfraRepository - buscaAutomovelId");
+        var buscaAutomovel = jpaRepository.findById(idAutomovel).orElseThrow(()
+                -> APIException.build(HttpStatus.NOT_FOUND, "AUTOMOVEL NAO ENCONTRADO OU "
+                        + "NAO EXISTE! \n INSIRA UM ID VALIDO OU INFORME AO ADM DO SISTEMA"
+                ));
+        log.info("[finaliza] AutomovelInfraRepository - buscaAutomovelId");
+        return null;
+    }
 }
