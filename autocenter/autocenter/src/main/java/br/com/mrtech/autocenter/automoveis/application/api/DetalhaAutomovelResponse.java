@@ -19,9 +19,10 @@ public class DetalhaAutomovelResponse {
     private String placa;
     private Boolean alugado = false;
     private LocalDate anoFabricacao;
+    private int valorDiaria;
     private LocalDateTime dataHoraCadastro;
     private LocalDate dataHoraDaUltimaAtualizacao;
-    private int valorDiaria;
+
 
 
     public DetalhaAutomovelResponse(Automovel automovel) {
