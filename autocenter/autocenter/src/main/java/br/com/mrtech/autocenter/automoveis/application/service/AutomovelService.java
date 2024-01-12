@@ -1,9 +1,6 @@
 package br.com.mrtech.autocenter.automoveis.application.service;
 
-import br.com.mrtech.autocenter.automoveis.application.api.AutomovelIdResponse;
-import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
-import br.com.mrtech.autocenter.automoveis.application.api.DetalhaAutomovelResponse;
-import br.com.mrtech.autocenter.automoveis.application.api.ListAutomoveisResponse;
+import br.com.mrtech.autocenter.automoveis.application.api.*;
 
 import java.util.List;
 
@@ -14,4 +11,5 @@ public interface AutomovelService {
 
     DetalhaAutomovelResponse DetalhaAutomovelResponse(Long idAutomovel);
 
+    void alteraInformacoesVeiculo(Long idAutomovel, AlteraInformacoesRequest informacoesVeiculo);
 }

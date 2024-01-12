@@ -1,5 +1,6 @@
 package br.com.mrtech.autocenter.automoveis.domain;
 
+import br.com.mrtech.autocenter.automoveis.application.api.AlteraInformacoesRequest;
 import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -45,5 +46,12 @@ public class Automovel {
         this.valorDiaria = automovelRequest.getValorDiaria();
         this.dataHoraCadastro = LocalDateTime.now();
 
+    }
+
+    public void alteraResquest(AlteraInformacoesRequest informacoesVeiculo) {
+        this.descricao = informacoesVeiculo.getDescricao();
+        this.alugado = informacoesVeiculo.getAlugado();
+        this.valorDiaria = informacoesVeiculo.getValorDiaria();
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
 }

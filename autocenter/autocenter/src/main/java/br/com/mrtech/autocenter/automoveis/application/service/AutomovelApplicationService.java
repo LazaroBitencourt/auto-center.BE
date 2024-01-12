@@ -1,9 +1,6 @@
 package br.com.mrtech.autocenter.automoveis.application.service;
 
-import br.com.mrtech.autocenter.automoveis.application.api.AutomovelIdResponse;
-import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
-import br.com.mrtech.autocenter.automoveis.application.api.DetalhaAutomovelResponse;
-import br.com.mrtech.autocenter.automoveis.application.api.ListAutomoveisResponse;
+import br.com.mrtech.autocenter.automoveis.application.api.*;
 import br.com.mrtech.autocenter.automoveis.application.repository.AutomovelRepository;
 import br.com.mrtech.autocenter.automoveis.domain.Automovel;
 import lombok.RequiredArgsConstructor;
@@ -41,5 +38,14 @@ public class AutomovelApplicationService implements AutomovelService{
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         log.info("[finaliza] AutomovelApplication - DetalhaAutomovelResponse");
         return new DetalhaAutomovelResponse(automovel);
+    }
+
+    @Override
+    public void alteraInformacoesVeiculo(Long idAutomovel, AlteraInformacoesRequest informacoesVeiculo) {
+        log.info("[inicia] AutomovelApplication - alteraInformacoesVeiculo");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraResquest(informacoesVeiculo);
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelApplication - alteraInformacoesVeiculo");
     }
 }
