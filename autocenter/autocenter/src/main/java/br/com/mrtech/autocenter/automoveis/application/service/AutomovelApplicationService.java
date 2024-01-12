@@ -45,6 +45,7 @@ public class AutomovelApplicationService implements AutomovelService{
         log.info("[inicia] AutomovelApplication - alteraInformacoesVeiculo");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraResquest(informacoesVeiculo);
+        repository.salva(automovel);
         log.info("[finaliza] AutomovelApplication - alteraInformacoesVeiculo");
     }
 }
