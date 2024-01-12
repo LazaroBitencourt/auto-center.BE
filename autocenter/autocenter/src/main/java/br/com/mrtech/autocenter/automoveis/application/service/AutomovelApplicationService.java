@@ -43,6 +43,8 @@ public class AutomovelApplicationService implements AutomovelService{
     @Override
     public void alteraInformacoesVeiculo(Long idAutomovel, AlteraInformacoesRequest informacoesVeiculo) {
         log.info("[inicia] AutomovelApplication - alteraInformacoesVeiculo");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraResquest(informacoesVeiculo);
         log.info("[finaliza] AutomovelApplication - alteraInformacoesVeiculo");
     }
 }
