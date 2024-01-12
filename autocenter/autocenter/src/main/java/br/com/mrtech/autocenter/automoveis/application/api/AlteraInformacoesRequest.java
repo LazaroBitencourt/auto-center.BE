@@ -5,7 +5,7 @@ import lombok.Value;
 
 
 @Value
-public class AlteraInformacoes {
+public class AlteraInformacoesRequest {
 
     private String descricao;
     private Boolean alugado = false;

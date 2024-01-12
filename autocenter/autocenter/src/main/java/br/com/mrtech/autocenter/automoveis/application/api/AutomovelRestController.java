@@ -38,5 +38,12 @@ public class AutomovelRestController implements AutomovelAPI{
         return detalhes;
     }
 
+    @Override
+    public void getAlteraInformacoesVeiculo(Long idAutomovel, AlteraInformacoesRequest informacoesVeiculo) {
+        log.info("[inicia] AutomovelRestController - getAlteraInformacoesVeiculo ");
+        service.alteraInformacoesVeiculo(idAutomovel, informacoesVeiculo);
+        log.info("[finaliza] AutomovelRestController - getAlteraInformacoesVeiculo ");
+    }
+
 
 }

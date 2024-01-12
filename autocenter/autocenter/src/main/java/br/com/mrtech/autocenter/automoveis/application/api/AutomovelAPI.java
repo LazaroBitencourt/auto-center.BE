@@ -23,5 +23,5 @@ public interface AutomovelAPI {
 
     @PatchMapping ("{idAutomovel}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void getAlteraInformacoesVeiculo(@PathVariable Long idAutomovel,AlteraInformacoes alteraInformacoes);
+    void getAlteraInformacoesVeiculo(@PathVariable Long idAutomovel, @RequestBody AlteraInformacoesRequest informacoesVeiculo);
 }
