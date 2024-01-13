@@ -69,6 +69,7 @@ public class AutomovelRestController implements AutomovelAPI{
     @Override
     public void getAlteraTipoAutomovelParaSuv(Long idAutomovel) {
         log.info("[inicia] AutomovelRestController - getAlteraTipoAutomovelParaSuv");
+        service.alteraTipoAumovelParaSuv(idAutomovel);
         log.info("[finaliza] AutomovelRestController - getAlteraTipoAutomovelParaSuv");
     }
 
