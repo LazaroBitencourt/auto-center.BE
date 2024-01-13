@@ -54,4 +54,9 @@ public class Automovel {
         this.valorDiaria = informacoesVeiculo.getValorDiaria();
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
+    public void alteraParaRenault() {
+        this.marca = Marca.RENAULT;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
 }

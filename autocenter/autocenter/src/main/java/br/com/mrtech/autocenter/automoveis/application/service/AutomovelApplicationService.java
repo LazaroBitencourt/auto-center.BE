@@ -48,4 +48,14 @@ public class AutomovelApplicationService implements AutomovelService{
         repository.salva(automovel);
         log.info("[finaliza] AutomovelApplication - alteraInformacoesVeiculo");
     }
+
+    @Override
+    public void alteraMarcaParaRenault(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplication - alteraMarcaParaRenault");
+      Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+      automovel.alteraParaRenault();
+      repository.salva(automovel);
+        log.info("[finaliza] AutomovelApplication - alteraMarcaParaRenault");
+    }
+   
 }
