@@ -70,7 +70,7 @@ public class Automovel {
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
 
-    public void alteraTipoParaSedan(Automovel automovel) {
+    public void alteraTipoSedan(Automovel automovel) {
         this.tipo = TipoAutomovel.SEDAN;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }

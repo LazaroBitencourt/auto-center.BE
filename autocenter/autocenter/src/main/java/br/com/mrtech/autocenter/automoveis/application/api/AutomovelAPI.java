@@ -38,5 +38,5 @@ public interface AutomovelAPI {
 
     @PostMapping ("{idAutomovel}/SEDAN")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void getAlteraTipoAutomovelSedan(@PathVariable Long idAutomovel);
+    void getAlteraTipoParaSedan(@PathVariable Long idAutomovel);
     }

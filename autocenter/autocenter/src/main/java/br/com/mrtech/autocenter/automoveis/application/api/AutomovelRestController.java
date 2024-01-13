@@ -67,10 +67,10 @@ public class AutomovelRestController implements AutomovelAPI{
     }
 
     @Override
-    public void getAlteraTipoAutomovelSedan(Long idAutomovel) {
-        log.info("[inicia] AutomovelRestController - getAlteraTipoAutomovelSedan");
-        service.alteraTipoAutomovelSedan(idAutomovel);
-        log.info("[finaliza] AutomovelRestController - getAlteraTipoAutomovelSedan");
+    public void getAlteraTipoParaSedan(Long idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraTipoParaSedan");
+        service.alteraTipoParaSedan(idAutomovel);
+        log.info("[finaliza] AutomovelRestController - getAlteraTipoParaSedan");
     }
 
 
