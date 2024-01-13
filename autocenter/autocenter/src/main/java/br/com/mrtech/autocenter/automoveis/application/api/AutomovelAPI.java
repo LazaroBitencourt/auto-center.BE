@@ -35,4 +35,8 @@ public interface AutomovelAPI {
     @PostMapping ("{idAutomovel}/VOLKSWAGEN")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaVolkswagen(@PathVariable Long idAutomovel);
+
+    @PostMapping ("{idAutomovel}/MOTOCICLETA")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraTipoParaMotocicleta(@PathVariable Long idAutomovel);
     }
