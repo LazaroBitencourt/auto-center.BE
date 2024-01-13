@@ -69,4 +69,9 @@ public class Automovel {
         this.marca = Marca.VOLKSWAGEN;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
+    public void alteraTipoParaSuv() {
+        this.tipo = TipoAutomovel.SUV;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
 }
