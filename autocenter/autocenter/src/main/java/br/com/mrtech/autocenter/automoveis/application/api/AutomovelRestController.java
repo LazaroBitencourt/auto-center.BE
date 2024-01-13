@@ -47,9 +47,16 @@ public class AutomovelRestController implements AutomovelAPI{
 
     @Override
     public void getAlteraMarcaParaRenault(Long idAutomovel) {
-        log.info("[inicia] AutomovelRestController - getAlteraMarcaParaRenault ");
+        log.info("[inicia] AutomovelRestController - getAlteraMarcaParaRenault");
         service.alteraMarcaParaRenault(idAutomovel);
-        log.info("[finaliza] AutomovelRestController - getAlteraMarcaParaRenault ");
+        log.info("[finaliza] AutomovelRestController - getAlteraMarcaParaRenault");
+    }
+
+    @Override
+    public void getAlteraMarcaParaFiat(Long idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraMarcaParaFiat");
+        service.alteraMarcaParaFiat(idAutomovel);
+        log.info("[finaliza] AutomovelRestController - getAlteraMarcaParaFiat");
     }
 
 

@@ -25,7 +25,12 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraInformacoesVeiculo(@PathVariable Long idAutomovel, @RequestBody AlteraInformacoesRequest informacoesVeiculo);
 
-    @PostMapping ("{idAutomovel}")
+    @PostMapping ("{idAutomovel}/RENAULT")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaRenault(@PathVariable Long idAutomovel);
+
+
+    @PostMapping ("{idAutomovel}/FIAT")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraMarcaParaFiat(@PathVariable Long idAutomovel);
     }

@@ -14,4 +14,6 @@ public interface AutomovelService {
     void alteraInformacoesVeiculo(Long idAutomovel, AlteraInformacoesRequest informacoesVeiculo);
 
     void alteraMarcaParaRenault(Long idAutomovel);
+
+    void alteraMarcaParaFiat(Long idAutomovel);
 }
