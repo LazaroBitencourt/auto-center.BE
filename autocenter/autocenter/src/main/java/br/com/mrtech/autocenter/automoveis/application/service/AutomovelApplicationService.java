@@ -77,6 +77,11 @@ public class AutomovelApplicationService implements AutomovelService{
 
     }
 
+    @Override
+    public void alteraTipoAutomovel(Long idAutomovel) {
+        log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovel");
+        log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovel");
+    }
 
 
 }
