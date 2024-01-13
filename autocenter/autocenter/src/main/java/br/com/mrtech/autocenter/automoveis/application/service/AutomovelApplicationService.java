@@ -77,5 +77,15 @@ public class AutomovelApplicationService implements AutomovelService{
 
     }
 
+    @Override
+    public void alteraTipoAutomovelParaHatch(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplicationService - alteraTipoAutomovelParaHatch");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraTipoParaHatch();
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelApplicationService - alteraTipoAutomovelParaHatch");
+
+    }
+
 
 }
