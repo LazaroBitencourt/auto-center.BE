@@ -66,5 +66,11 @@ public class AutomovelRestController implements AutomovelAPI{
         log.info("[finaliza] AutomovelRestController - getAlteraMarcaParaVolkswagen" );
     }
 
+    @Override
+    public void getAlteraTipoAutomovelSedan(Long idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraTipoAutomovelSedan");
+        log.info("[finaliza] AutomovelRestController - getAlteraTipoAutomovelSedan");
+    }
+
 
 }
