@@ -64,4 +64,9 @@ public class Automovel {
         this.marca = Marca.FIAT;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
+    public void alteraParaVolkswagen() {
+        this.marca = Marca.VOLKSWAGEN;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
 }

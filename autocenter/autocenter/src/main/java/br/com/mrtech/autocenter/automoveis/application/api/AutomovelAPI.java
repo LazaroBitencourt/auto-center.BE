@@ -12,7 +12,6 @@ public interface AutomovelAPI {
     @ResponseStatus(code = HttpStatus.CREATED)
     AutomovelIdResponse postCadastraNovoVeiculo(@RequestBody @Valid AutomovelRequest automovelRequest);
 
-
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     List<ListAutomoveisResponse> getListaTodosVeiculos();
@@ -29,8 +28,11 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaRenault(@PathVariable Long idAutomovel);
 
-
     @PostMapping ("{idAutomovel}/FIAT")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaFiat(@PathVariable Long idAutomovel);
+
+    @PostMapping ("{idAutomovel}/VOLKSWAGEN")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraMarcaParaVolkswagen(@PathVariable Long idAutomovel);
     }
