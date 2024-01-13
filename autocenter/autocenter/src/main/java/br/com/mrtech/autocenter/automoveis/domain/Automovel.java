@@ -70,7 +70,7 @@ public class Automovel {
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
 
-    public void alteraTipoParaHatch() {
+    public void alteraParaHatch() {
         this.tipo = TipoAutomovel.HATCH;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
