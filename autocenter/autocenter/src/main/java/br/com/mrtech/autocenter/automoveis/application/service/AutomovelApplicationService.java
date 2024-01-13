@@ -77,5 +77,14 @@ public class AutomovelApplicationService implements AutomovelService{
 
     }
 
+    @Override
+    public void alteraTipoParaMotocicleta(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplicationService - alteraTipoParaMotocicleta");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraParaMotocicleta();
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelApplicationService - alteraTipoParaMotocicleta");
+    }
+
 
 }
