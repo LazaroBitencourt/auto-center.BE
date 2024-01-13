@@ -79,11 +79,11 @@ public class AutomovelApplicationService implements AutomovelService{
 
     @Override
     public void alteraTipoAutomovelSedan(Long idAutomovel) {
-        log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovel");
+        log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovelsedan");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraTipoParaSedan(automovel);
         repository.salva(automovel);
-        log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovel");
+        log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovelsedan");
     }
 
 
