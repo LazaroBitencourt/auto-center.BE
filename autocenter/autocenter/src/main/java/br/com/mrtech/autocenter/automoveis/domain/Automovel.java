@@ -69,4 +69,9 @@ public class Automovel {
         this.marca = Marca.VOLKSWAGEN;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
+    public void alteraTipoParaHatch() {
+        this.tipo = TipoAutomovel.HATCH;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
 }
