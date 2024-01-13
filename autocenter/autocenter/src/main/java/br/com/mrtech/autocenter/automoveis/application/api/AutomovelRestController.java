@@ -67,9 +67,9 @@ public class AutomovelRestController implements AutomovelAPI{
     }
 
     @Override
-    public void getAlteraTipoAutomovelHatch(Long idAutomovel) {
+    public void getAlteraTipoAutomovelParaHatch(Long idAutomovel) {
         log.info("[inicia] AutomovelRestController - getAlteraTipoAutomovelHatch");
-
+        service.alteraTipoAutomovelParaHatch(idAutomovel);
         log.info("[finaliza] AutomovelRestController - getAlteraTipoAutomovelHatch");
     }
 

@@ -38,6 +38,6 @@ public interface AutomovelAPI {
 
     @PostMapping ("{idAutomovel}/HATCH")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    void getAlteraTipoAutomovelHatch(@PathVariable Long idAutomovel);
+    void getAlteraTipoAutomovelParaHatch(@PathVariable Long idAutomovel);
 
     }
