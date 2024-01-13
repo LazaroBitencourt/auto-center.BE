@@ -82,6 +82,7 @@ public class AutomovelApplicationService implements AutomovelService{
         log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovel");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraTipoParaSedan(automovel);
+        repository.salva(automovel);
         log.info("[inicia] AutomovelAplicationService - alteraTipoAutomovel");
     }
 
