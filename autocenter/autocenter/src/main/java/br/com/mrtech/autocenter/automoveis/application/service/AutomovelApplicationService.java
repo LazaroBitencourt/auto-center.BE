@@ -78,12 +78,12 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public void alteraTipoAumovelParaSuv(Long idAutomovel) {
-        log.info("[inicia] AutomovelApplicationService - alteraTipoAumovelParaSuv");
+    public void alteraTipoParaSuv(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplicationService - alteraTipoParaSuv");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
-        automovel.alteraTipoParaSuv();
+        automovel.alteraParaSuv();
         repository.salva(automovel);
-        log.info("[finaliza] AutomovelApplicationService - alteraTipoAumovelParaSuv");
+        log.info("[finaliza] AutomovelApplicationService - alteraTipoParaSuv");
     }
 
 

@@ -19,5 +19,5 @@ public interface AutomovelService {
 
     void alteraMarcaParaVolkswagen(Long idAutomovel);
 
-    void alteraTipoAumovelParaSuv(Long idAutomovel);
+    void alteraTipoParaSuv(Long idAutomovel);
 }
