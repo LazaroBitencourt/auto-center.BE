@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.UUID;
 
 @Repository
 @Log4j2
@@ -39,7 +40,7 @@ public class AutomovelInfraRepository implements AutomovelRepository {
     }
 
     @Override
-    public Automovel buscaAutomovelId(Long idAutomovel) {
+    public Automovel buscaAutomovelId(UUID idAutomovel) {
         log.info("[inicia] AutomovelInfraRepository - buscaAutomovelId");
         var buscaAutomovel = jpaRepository.findById(idAutomovel).orElseThrow(()
                 -> APIException.build(HttpStatus.NOT_FOUND, "AUTOMOVEL NAO ENCONTRADO OU "
@@ -47,5 +48,12 @@ public class AutomovelInfraRepository implements AutomovelRepository {
                 ));
         log.info("[finaliza] AutomovelInfraRepository - buscaAutomovelId");
         return buscaAutomovel;
+    }
+
+    @Override
+    public void deletaAutomovelPorId(UUID idAutomovel) {
+        log.info("[inicia] AutomovelInfraRepository - deletaAutomovelPorId");
+        jpaRepository.deleteById(idAutomovel);
+        log.info("[finaliza] AutomovelInfraRepository - deletaAutomovelPorId");
     }
 }
