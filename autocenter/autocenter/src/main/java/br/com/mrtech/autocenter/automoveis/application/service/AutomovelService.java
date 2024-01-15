@@ -19,6 +19,9 @@ public interface AutomovelService {
     void alteraMarcaParaFiat(UUID idAutomovel);
 
     void alteraMarcaParaVolkswagen(UUID idAutomovel);
+    
+
+    void alteraMarcaParaHonda(UUID idAutomovel);
 
     void alteraMarcaParaToyota(UUID idAutomovel);
     void alteraTipoParaMotocicleta(UUID idAutomovel);
@@ -30,5 +33,6 @@ public interface AutomovelService {
     void alteraTipoParaSedan(UUID idAutomovel);
 
     void deletaAutomovelPorId(UUID idAutomovel);
+
 
 }
