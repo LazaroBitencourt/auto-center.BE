@@ -68,6 +68,12 @@ public class AutomovelRestController implements AutomovelAPI{
     }
 
     @Override
+    public void getAlteraMarcaParaHonda(UUID idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraMarcaParaHonda");
+        log.info("[inicia] AutomovelRestController - getAlteraMarcaParaHonda");
+    }
+
+    @Override
     public void getAlteraMarcaParaToyota(UUID idAutomovel) {
         log.info("[inicia] AutomovelRestController - getAlteraMarcaParaToyota");
         service.alteraMarcaParaToyota(idAutomovel);
