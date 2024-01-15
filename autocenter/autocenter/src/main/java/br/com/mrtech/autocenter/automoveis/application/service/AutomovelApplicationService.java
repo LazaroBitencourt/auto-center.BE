@@ -79,6 +79,14 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
+    public void alteraTipoParaSuv(UUID idAutomovel) {
+        log.info("[inicia] AutomovelApplicationService - alteraTipoParaSuv");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraParaSuv();
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelApplicationService - alteraTipoParaSuv");
+    }
+
     public void alteraTipoParaHatch(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplicationService - alteraTipoParaHatch");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
@@ -90,7 +98,7 @@ public class AutomovelApplicationService implements AutomovelService{
     public void alteraTipoParaSedan(UUID idAutomovel) {
         log.info("[inicia] AutomovelAplicationService - alteraTipoParaSedan");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
-        automovel.alteraTipoSedan(automovel);
+        automovel.alteraParaSedan();
         repository.salva(automovel);
         log.info("[inicia] AutomovelAplicationService - alteraTipoParaSedan");
     }

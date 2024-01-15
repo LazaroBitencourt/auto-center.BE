@@ -68,6 +68,11 @@ public class AutomovelRestController implements AutomovelAPI{
     }
 
     @Override
+    public void getAlteraTipoParaSuv(UUID idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraTipoParaSuv");
+        service.alteraTipoParaSuv(idAutomovel);
+        log.info("[finaliza] AutomovelRestController - getAlteraTipoParaSuv");
+    }
 
     public void getAlteraTipoParaHatch(UUID idAutomovel) {
         log.info("[inicia] AutomovelRestController - getAlteraTipoHatch");
@@ -86,7 +91,6 @@ public class AutomovelRestController implements AutomovelAPI{
         log.info("[inicia] AutomovelRestController - deleteAutomovelPorId" );
         service.deletaAutomovelPorId(idAutomovel);
         log.info("[finaliza] AutomovelRestController - deleteAutomovelPorId" );
-
 
     }
 
