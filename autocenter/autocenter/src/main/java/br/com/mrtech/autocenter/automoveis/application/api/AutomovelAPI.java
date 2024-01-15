@@ -35,4 +35,9 @@ public interface AutomovelAPI {
     @PostMapping ("{idAutomovel}/VOLKSWAGEN")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaVolkswagen(@PathVariable Long idAutomovel);
+
+    @DeleteMapping  ("{idAutomovel}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void deleteAutomovelPorId(@PathVariable Long idAutomovel);
+
     }
