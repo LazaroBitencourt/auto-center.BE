@@ -72,6 +72,11 @@ public class Automovel {
         this.marca = Marca.VOLKSWAGEN;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
+    public void alteraParaHonda() {
+        this.marca = Marca.HONDA;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
     public void alteraParaToyota() {
         this.marca = Marca.TOYOTA;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
@@ -95,6 +100,7 @@ public class Automovel {
         this.tipo = TipoAutomovel.SEDAN;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
 
 
 }
