@@ -1,9 +1,9 @@
 package br.com.mrtech.autocenter.automoveis.application.api;
 
-
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping("/v1/automovel")
