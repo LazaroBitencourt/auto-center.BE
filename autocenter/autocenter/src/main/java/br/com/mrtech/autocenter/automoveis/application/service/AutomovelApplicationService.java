@@ -77,5 +77,11 @@ public class AutomovelApplicationService implements AutomovelService{
 
     }
 
+    @Override
+    public void deletaAutomovelPorId(Long idAutomovel) {
+        log.info("[inicia] AutomovelApplicationService - deletaAutomovelPorId");
+        log.info("[finaliza] AutomovelApplicationService - deletaAutomovelPorId");
+    }
+
 
 }
