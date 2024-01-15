@@ -73,6 +73,11 @@ public class Automovel {
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
 
+    public void alteraParaHyundai() {
+        this.marca = Marca.HYUNDAI;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
+
     public void alteraParaHonda() {
         this.marca = Marca.HONDA;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
