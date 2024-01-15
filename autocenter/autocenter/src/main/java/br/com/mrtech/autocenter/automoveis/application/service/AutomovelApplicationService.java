@@ -81,6 +81,7 @@ public class AutomovelApplicationService implements AutomovelService{
     public void deletaAutomovelPorId(Long idAutomovel) {
         log.info("[inicia] AutomovelApplicationService - deletaAutomovelPorId");
         repository.buscaAutomovelId(idAutomovel);
+        repository.deletaAutomovelPorId(idAutomovel);
         log.info("[finaliza] AutomovelApplicationService - deletaAutomovelPorId");
     }
 
