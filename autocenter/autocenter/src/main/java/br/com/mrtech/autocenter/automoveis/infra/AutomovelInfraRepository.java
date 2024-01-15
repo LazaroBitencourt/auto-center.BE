@@ -48,4 +48,11 @@ public class AutomovelInfraRepository implements AutomovelRepository {
         log.info("[finaliza] AutomovelInfraRepository - buscaAutomovelId");
         return buscaAutomovel;
     }
+
+    @Override
+    public void deletaAutomovelPorId(Long idAutomovel) {
+        log.info("[inicia] AutomovelInfraRepository - deletaAutomovelPorId");
+        jpaRepository.deleteById(idAutomovel);
+        log.info("[finaliza] AutomovelInfraRepository - deletaAutomovelPorId");
+    }
 }

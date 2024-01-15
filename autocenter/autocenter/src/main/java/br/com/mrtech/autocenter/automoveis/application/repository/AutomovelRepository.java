@@ -10,4 +10,6 @@ public interface AutomovelRepository {
     List<Automovel> buscaTodosVeiculos();
 
     Automovel buscaAutomovelId(Long idAutomovel);
+
+    void deletaAutomovelPorId(Long idAutomovel);
 }
