@@ -6,12 +6,13 @@ import br.com.mrtech.autocenter.automoveis.domain.TipoAutomovel;
 import lombok.Getter;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Getter
 public class ListAutomoveisResponse {
 
-    private Long idAutomovel;
+    private UUID idAutomovel;
     private TipoAutomovel tipo;
     private String placa;
     private int valorDiaria;
