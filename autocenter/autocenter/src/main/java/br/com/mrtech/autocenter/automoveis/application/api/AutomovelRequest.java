@@ -2,7 +2,10 @@ package br.com.mrtech.autocenter.automoveis.application.api;
 
 import br.com.mrtech.autocenter.automoveis.domain.Marca;
 import br.com.mrtech.autocenter.automoveis.domain.TipoAutomovel;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a067240c10c0a8b1a78447a12f0061bf1cefda4
 import lombok.Getter;
 
 import javax.validation.constraints.NotBlank;

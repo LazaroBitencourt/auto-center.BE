@@ -8,11 +8,12 @@ import lombok.Getter;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Getter
 public class DetalhaAutomovelResponse {
 
-    private Long idAutomovel;
+    private UUID idAutomovel;
     private TipoAutomovel tipo;
     private Marca marca;
     private String descricao;
