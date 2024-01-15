@@ -56,4 +56,5 @@ public class AutomovelInfraRepository implements AutomovelRepository {
         jpaRepository.deleteById(idAutomovel);
         log.info("[finaliza] AutomovelInfraRepository - deletaAutomovelPorId");
     }
+    
 }
