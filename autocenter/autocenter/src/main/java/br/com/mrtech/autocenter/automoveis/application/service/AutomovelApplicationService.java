@@ -8,6 +8,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @Log4j2
@@ -33,7 +34,7 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public DetalhaAutomovelResponse DetalhaAutomovelResponse(Long idAutomovel) {
+    public DetalhaAutomovelResponse DetalhaAutomovelResponse(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplication - DetalhaAutomovelResponse");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         log.info("[finaliza] AutomovelApplication - DetalhaAutomovelResponse");
@@ -41,7 +42,7 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public void alteraInformacoesVeiculo(Long idAutomovel, AlteraInformacoesRequest informacoesVeiculo) {
+    public void alteraInformacoesVeiculo(UUID idAutomovel, AlteraInformacoesRequest informacoesVeiculo) {
         log.info("[inicia] AutomovelApplication - alteraInformacoesVeiculo");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraResquest(informacoesVeiculo);
@@ -50,7 +51,7 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public void alteraMarcaParaRenault(Long idAutomovel) {
+    public void alteraMarcaParaRenault(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplication - alteraMarcaParaRenault");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraParaRenault();
@@ -59,7 +60,7 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public void alteraMarcaParaFiat(Long idAutomovel) {
+    public void alteraMarcaParaFiat(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplication - alteraMarcaParaFiat");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraParaFiat();
@@ -68,7 +69,7 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public void alteraMarcaParaVolkswagen(Long idAutomovel) {
+    public void alteraMarcaParaVolkswagen(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplicationService - alteraMarcaParaVolkswagen");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraParaVolkswagen();
@@ -78,7 +79,7 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
-    public void deletaAutomovelPorId(Long idAutomovel) {
+    public void deletaAutomovelPorId(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplicationService - deletaAutomovelPorId");
         repository.buscaAutomovelId(idAutomovel);
         repository.deletaAutomovelPorId(idAutomovel);
