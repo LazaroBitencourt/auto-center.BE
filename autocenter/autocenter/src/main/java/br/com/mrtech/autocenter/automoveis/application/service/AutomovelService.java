@@ -22,7 +22,7 @@ public interface AutomovelService {
 
 
     void alteraMarcaParaHyundai(UUID idAutomovel);
-    
+
     void alteraMarcaParaHonda(UUID idAutomovel);
 
     void alteraMarcaParaToyota(UUID idAutomovel);

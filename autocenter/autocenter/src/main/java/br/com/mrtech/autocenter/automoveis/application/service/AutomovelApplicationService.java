@@ -79,6 +79,15 @@ public class AutomovelApplicationService implements AutomovelService{
     }
 
     @Override
+    public void alteraMarcaParaHyundai(UUID idAutomovel) {
+        log.info("[inicia] AutomovelApplicationService - alteraMarcaParaHyundai");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraParaHyundai();
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelApplicationService - alteraMarcaParaHyundai");
+    }
+
+    @Override
     public void alteraMarcaParaHonda(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplicationService - alteraMarcaParaHonda");
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
