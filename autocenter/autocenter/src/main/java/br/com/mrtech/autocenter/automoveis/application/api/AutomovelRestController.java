@@ -66,5 +66,11 @@ public class AutomovelRestController implements AutomovelAPI{
         log.info("[finaliza] AutomovelRestController - getAlteraMarcaParaVolkswagen" );
     }
 
+    @Override
+    public void deleteAutomovelPorId(Long idAutomovel) {
+        log.info("[inicia] AutomovelRestController - deleteAutomovelPorId" );
+        log.info("[finaliza] AutomovelRestController - deleteAutomovelPorId" );
+    }
+
 
 }
