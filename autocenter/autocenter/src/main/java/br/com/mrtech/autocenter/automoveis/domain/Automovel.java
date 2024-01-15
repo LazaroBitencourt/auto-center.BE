@@ -2,13 +2,14 @@ package br.com.mrtech.autocenter.automoveis.domain;
 
 import br.com.mrtech.autocenter.automoveis.application.api.AlteraInformacoesRequest;
 import br.com.mrtech.autocenter.automoveis.application.api.AutomovelRequest;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 

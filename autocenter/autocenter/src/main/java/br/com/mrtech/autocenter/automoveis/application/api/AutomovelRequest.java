@@ -2,14 +2,12 @@ package br.com.mrtech.autocenter.automoveis.application.api;
 
 import br.com.mrtech.autocenter.automoveis.domain.Marca;
 import br.com.mrtech.autocenter.automoveis.domain.TipoAutomovel;
-import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Getter
 public class AutomovelRequest {
