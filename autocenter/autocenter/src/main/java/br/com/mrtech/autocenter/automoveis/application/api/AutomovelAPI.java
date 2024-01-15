@@ -37,6 +37,10 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaVolkswagen(@PathVariable UUID idAutomovel);
 
+    @PostMapping ("/{idAutomovel}/HYUNDAI")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraMarcaParaHyundai(@PathVariable UUID idAutomovel);
+
     @PostMapping ("/{idAutomovel}/HONDA")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaHonda(@PathVariable UUID idAutomovel);
