@@ -12,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -20,7 +21,8 @@ import java.time.LocalDateTime;
 public class Automovel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long idAutomovel;
+    @Column(columnDefinition = "UUID", name = "idAutomovel", unique = true, nullable = false)
+    private UUID idAutomovel;
     @Enumerated(value = EnumType.STRING)
     private TipoAutomovel  tipo;
     @Enumerated(value = EnumType.STRING)
