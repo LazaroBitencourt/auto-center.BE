@@ -80,6 +80,7 @@ public class AutomovelRestController implements AutomovelAPI{
         service.alteraTipoParaMotocicleta(idAutomovel);
         log.info("[finaliza] AutomovelRestController - getAlteraTipoParaMotocicleta");
     }
+
     public void getAlteraTipoParaSuv(UUID idAutomovel) {
         log.info("[inicia] AutomovelRestController - getAlteraTipoParaSuv");
         service.alteraTipoParaSuv(idAutomovel);
