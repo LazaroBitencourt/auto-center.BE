@@ -19,27 +19,27 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.OK)
     List<ListAutomoveisResponse> getListaTodosVeiculos();
 
-    @GetMapping("{idAutomovel}")
+    @GetMapping("/{idAutomovel}")
     @ResponseStatus(HttpStatus.OK)
     DetalhaAutomovelResponse getDetalhaAutomovel(@PathVariable UUID idAutomovel);
 
-    @PatchMapping ("{idAutomovel}")
+    @PatchMapping ("/{idAutomovel}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraInformacoesVeiculo(@PathVariable UUID idAutomovel, @RequestBody AlteraInformacoesRequest informacoesVeiculo);
 
-    @PostMapping ("{idAutomovel}/RENAULT")
+    @PostMapping ("/{idAutomovel}/RENAULT")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaRenault(@PathVariable UUID idAutomovel);
 
-    @PostMapping ("{idAutomovel}/FIAT")
+    @PostMapping ("/{idAutomovel}/FIAT")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaFiat(@PathVariable UUID idAutomovel);
 
-    @PostMapping ("{idAutomovel}/VOLKSWAGEN")
+    @PostMapping ("/{idAutomovel}/VOLKSWAGEN")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaVolkswagen(@PathVariable UUID idAutomovel);
 
-    @DeleteMapping  ("{idAutomovel}")
+    @DeleteMapping  ("/{idAutomovel}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteAutomovelPorId(@PathVariable UUID idAutomovel);
 
