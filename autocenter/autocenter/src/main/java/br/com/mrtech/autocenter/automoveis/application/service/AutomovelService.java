@@ -20,5 +20,9 @@ public interface AutomovelService {
 
     void alteraMarcaParaVolkswagen(UUID idAutomovel);
 
+    void alteraTipoParaSedan(UUID idAutomovel);
+
+
     void deletaAutomovelPorId(UUID idAutomovel);
+
 }

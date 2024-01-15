@@ -68,10 +68,18 @@ public class AutomovelRestController implements AutomovelAPI{
     }
 
     @Override
+    public void getAlteraTipoParaSedan(UUID idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraTipoParaSedan");
+        service.alteraTipoParaSedan(idAutomovel);
+        log.info("[finaliza] AutomovelRestController - getAlteraTipoParaSedan");
+
+    }
+
     public void deleteAutomovelPorId(UUID idAutomovel) {
         log.info("[inicia] AutomovelRestController - deleteAutomovelPorId" );
         service.deletaAutomovelPorId(idAutomovel);
         log.info("[finaliza] AutomovelRestController - deleteAutomovelPorId" );
+
     }
 
 

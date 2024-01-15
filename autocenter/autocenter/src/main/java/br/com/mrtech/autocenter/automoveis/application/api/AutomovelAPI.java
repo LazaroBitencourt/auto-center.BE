@@ -37,6 +37,10 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraMarcaParaVolkswagen(@PathVariable UUID idAutomovel);
 
+    @PostMapping ("/{idAutomovel}/SEDAN")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraTipoParaSedan(@PathVariable UUID idAutomovel);
+
     @DeleteMapping  ("/{idAutomovel}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteAutomovelPorId(@PathVariable UUID idAutomovel);
