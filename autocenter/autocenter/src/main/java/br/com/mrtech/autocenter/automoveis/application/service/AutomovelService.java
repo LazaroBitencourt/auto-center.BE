@@ -38,7 +38,6 @@ public interface AutomovelService {
 
     void alteraTipoParaMinivan(UUID idAutomovel);
     
-
     void alteraTipoParaCupe(UUID idAutomovel);
 
     void deletaAutomovelPorId(UUID idAutomovel);
