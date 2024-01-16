@@ -138,6 +138,15 @@ public class AutomovelApplicationService implements AutomovelService{
         log.info("[inicia] AutomovelAplicationService - alteraTipoParaSedan");
     }
 
+    @Override
+    public void alteraTipoParaMinivan(UUID idAutomovel) {
+        log.info("[inicia] AutomovelAplicationService - alteraTipoParaMinivan");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraParaMinivan();
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelAplicationService - alteraTipoParaMinivan");
+    }
+
     public void deletaAutomovelPorId(UUID idAutomovel) {
         log.info("[inicia] AutomovelApplicationService - deletaAutomovelPorId");
         repository.buscaAutomovelId(idAutomovel);
