@@ -114,6 +114,12 @@ public class AutomovelRestController implements AutomovelAPI{
 
     }
 
+    @Override
+    public void getAlteraTipoParaMinivan(UUID idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraTipoParaMinivan");
+        log.info("[finaliza] AutomovelRestController - getAlteraTipoParaMinivan");
+    }
+
     public void deleteAutomovelPorId(UUID idAutomovel) {
         log.info("[inicia] AutomovelRestController - deleteAutomovelPorId" );
         service.deletaAutomovelPorId(idAutomovel);
