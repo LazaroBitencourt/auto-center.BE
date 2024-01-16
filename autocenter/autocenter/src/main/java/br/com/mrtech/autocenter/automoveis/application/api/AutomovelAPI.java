@@ -69,6 +69,10 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraTipoParaMinivan(@PathVariable UUID idAutomovel);
 
+    @PostMapping ("/{idAutomovel}/PICAPE")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraTipoParaPicape(@PathVariable UUID idAutomovel);
+
     @DeleteMapping ("/{idAutomovel}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteAutomovelPorId(@PathVariable UUID idAutomovel);

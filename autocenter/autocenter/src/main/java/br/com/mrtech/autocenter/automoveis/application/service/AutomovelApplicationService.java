@@ -135,7 +135,17 @@ public class AutomovelApplicationService implements AutomovelService{
         Automovel automovel = repository.buscaAutomovelId(idAutomovel);
         automovel.alteraParaSedan();
         repository.salva(automovel);
-        log.info("[inicia] AutomovelAplicationService - alteraTipoParaSedan");
+        log.info("[finaliza] AutomovelAplicationService - alteraTipoParaSedan");
+    }
+
+    @Override
+    public void alteraTipoParaPicape(UUID idAutomovel) {
+        log.info("[inicia] AutomovelAplicationService - alteraTipoParaPicape");
+        Automovel automovel = repository.buscaAutomovelId(idAutomovel);
+        automovel.alteraParaPicape();
+        repository.salva(automovel);
+        log.info("[finaliza] AutomovelAplicationService - alteraTipoParaPicape");
+
     }
 
     @Override
