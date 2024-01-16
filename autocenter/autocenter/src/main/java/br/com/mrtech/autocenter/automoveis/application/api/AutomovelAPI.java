@@ -73,6 +73,10 @@ public interface AutomovelAPI {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void getAlteraTipoParaPicape(@PathVariable UUID idAutomovel);
 
+    @PostMapping ("/{idAutomovel}/CUPE")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    void getAlteraTipoParaCupe(@PathVariable UUID idAutomovel);
+
     @DeleteMapping ("/{idAutomovel}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void deleteAutomovelPorId(@PathVariable UUID idAutomovel);

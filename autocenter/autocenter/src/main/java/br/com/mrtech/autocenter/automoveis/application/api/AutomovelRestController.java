@@ -128,6 +128,13 @@ public class AutomovelRestController implements AutomovelAPI{
         log.info("[finaliza] AutomovelRestController - getAlteraTipoParaPicape");
     }
 
+    @Override
+    public void getAlteraTipoParaCupe(UUID idAutomovel) {
+        log.info("[inicia] AutomovelRestController - getAlteraTipoParaCupe");
+        service.alteraTipoParaCupe(idAutomovel);
+        log.info("[finaliza] AutomovelRestController - getAlteraTipoParaCupe");
+    }
+
     public void deleteAutomovelPorId(UUID idAutomovel) {
         log.info("[inicia] AutomovelRestController - deleteAutomovelPorId" );
         service.deletaAutomovelPorId(idAutomovel);

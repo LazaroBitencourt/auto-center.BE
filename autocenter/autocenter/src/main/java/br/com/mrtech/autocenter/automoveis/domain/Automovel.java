@@ -116,5 +116,8 @@ public class Automovel {
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
 
-
+    public void alteraParaCupe() {
+        this.tipo = TipoAutomovel.CUPE;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
 }

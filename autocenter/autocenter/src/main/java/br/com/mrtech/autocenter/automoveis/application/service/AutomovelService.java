@@ -34,11 +34,13 @@ public interface AutomovelService {
 
     void alteraTipoParaSedan(UUID idAutomovel);
 
-
     void alteraTipoParaPicape(UUID idAutomovel);
 
     void alteraTipoParaMinivan(UUID idAutomovel);
 
+    void alteraTipoParaCupe(UUID idAutomovel);
+
     void deletaAutomovelPorId(UUID idAutomovel);
+
 
 }
