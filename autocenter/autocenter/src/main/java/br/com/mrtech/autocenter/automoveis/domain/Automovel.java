@@ -106,8 +106,15 @@ public class Automovel {
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
 
+    public void alteraParaPicape() {
+        this.tipo = TipoAutomovel.PICAPE;
+        this.dataHoraDaUltimaAtualizacao = LocalDate.now();
+    }
+
     public void alteraParaMinivan() {
         this.tipo = TipoAutomovel.MINIVAN;
         this.dataHoraDaUltimaAtualizacao = LocalDate.now();
     }
+
+
 }

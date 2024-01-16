@@ -36,7 +36,7 @@ public interface AutomovelService {
 
 
     void alteraTipoParaPicape(UUID idAutomovel);
-    
+
     void alteraTipoParaMinivan(UUID idAutomovel);
 
     void deletaAutomovelPorId(UUID idAutomovel);
